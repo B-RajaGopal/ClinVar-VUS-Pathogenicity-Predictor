@@ -26,23 +26,26 @@ The pipeline evaluates standard and optimized ensemble architectures. Performanc
 | :--- | :--- | :--- | :--- |
 | **XGBoost** | **Optuna Tuned** | **0.808** | **0.71** |
 
-*(Insert `images/roc_curve.png` and `images/confusion_matrix.png` here)*
+### ROC Curve & Confusion Matrix
+![ROC Curve](images/roc_curve.png)
+![Confusion Matrix](images/confusion_matrix.png)
 
 ## 🔬 Clinical Output & VUS Evaluation
 The tuned model was deployed against >1.7 million Variants of Uncertain Significance to generate pathogenic probability distributions. 
 
-*(Insert `images/hgb_optuna_prob.png` here)*
+![VUS Probability Distribution](images/xgb_optuna_prob.png)
 
 **Biological Interpretability:**
 SHAP analysis confirmed the model relies on genuine biological markers rather than memorizing database indices. The highest feature attributions map directly to `GeneSymbol` and specific chromosomal loci (`Chromosome Start`). 
 
 Notably, in the unclassified VUS evaluation, the model flagged multiple high-confidence (99.5% probability) pathogenic candidates localized to the **CFTR** gene on Chromosome 7—a well-documented locus for Cystic Fibrosis.
 
-*(Insert `images/shap_summary_plot.png` here)*
+![SHAP Summary Plot](images/shap_summary_plot.png)
 
 ## ⚙️ Usage & Reproducibility
 ```bash
 git clone [https://github.com/B-RajaGopal/ClinVar-VUS-Pathogenicity-Predictor.git](https://github.com/B-RajaGopal/ClinVar-VUS-Pathogenicity-Predictor.git)
 cd ClinVar-VUS-Pathogenicity-Predictor
 pip install -r requirements.txt
+
 
