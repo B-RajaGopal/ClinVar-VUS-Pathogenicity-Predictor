@@ -36,7 +36,7 @@ The tuned model was deployed against >1.7 million Variants of Uncertain Signific
 ![VUS Probability Distribution](images/xgb_optuna_prob.png)
 
 **Biological Interpretability:**
-SHAP analysis confirmed the model relies on genuine biological markers rather than memorizing database indices. The highest feature attributions map directly to `GeneSymbol` and specific chromosomal loci (`Chromosome Start`). 
+SHAP analysis identified that the model's highest feature attributions map directly to `GeneSymbol` and specific chromosomal loci (`Chromosome Start`), aligning with established genetic indicators. 
 
 Notably, in the unclassified VUS evaluation, the model flagged multiple high-confidence (99.5% probability) pathogenic candidates localized to the **CFTR** gene on Chromosome 7—a well-documented locus for Cystic Fibrosis.
 
@@ -47,5 +47,3 @@ Notably, in the unclassified VUS evaluation, the model flagged multiple high-con
 git clone [https://github.com/B-RajaGopal/ClinVar-VUS-Pathogenicity-Predictor.git](https://github.com/B-RajaGopal/ClinVar-VUS-Pathogenicity-Predictor.git)
 cd ClinVar-VUS-Pathogenicity-Predictor
 pip install -r requirements.txt
-
-
